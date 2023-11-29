@@ -6,7 +6,7 @@ body {
 	background: var(--tg-theme-bg-color);
 }
 .container {
-	max-width: 390px;
+	max-width: 600px;
 }
 .inner {
 	display: grid;
