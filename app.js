@@ -1,31 +1,56 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
-tg.MainButton.textColor = "#FFFFFF";
-tg.MainButton.color = "#2cab37";
+
+tg.MainButton.textColor = "#00FF00";
+tg.MainButton.color = "#000000";
+
 let item = "";
-let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
-btn1.addEventListener("click", function () {
+let frash_and_floral = document.getElementById("frash_and_floral");
+let light_and_refreshing = document.getElementById("light_and_refreshing");
+let oriental_and_exotic = document.getElementById("oriental_and_exotic");
+let confident_and_stylish = document.getElementById("confident_and_stylish");
+
+frash_and_floral.addEventListener("click", function () {
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
 	else {
-		tg.MainButton.setText("Вывести информацию по овену");
-		item = "1";
+		tg.MainButton.setText("Показать!");
+		item = "frash_and_floral";
 		tg.MainButton.show();
 	}
 });
-btn2.addEventListener("click", function () {
+light_and_refreshing.addEventListener("click", function () {
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
-	}	
-	else {
-		tg.MainButton.setText("Вывести информацию по тельцу");
-		item = "2";
-	tg.MainButton.show();
 	}
-
+	else {
+		tg.MainButton.setText("Показать!");
+		item = "light_and_refreshing";
+		tg.MainButton.show();
+	}
 });
+oriental_and_exotic.addEventListener("click", function () {
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Показать!");
+		item = "oriental_and_exotic";
+		tg.MainButton.show();
+	}
+});
+confident_and_stylish.addEventListener("click", function () {
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Показать!");
+		item = "confident_and_stylish";
+		tg.MainButton.show();
+	}
+});
+
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-tg.sendData(item);
+	tg.sendData(item);
 });
