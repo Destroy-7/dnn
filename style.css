@@ -31,5 +31,5 @@ body {
 	transition: background .2s linear;
 }
 .button:hover {
-	background: пкфн;
+	background: grey;
 }
